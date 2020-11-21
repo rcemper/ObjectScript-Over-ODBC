@@ -5,4 +5,4 @@
 ~~~ 
 
 
-[Article in DC](https://community.intersystems.com/)
+[Article in DC](https://community.intersystems.com/post/objectscript-over-odbc)
