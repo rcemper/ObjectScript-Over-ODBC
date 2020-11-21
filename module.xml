@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Export generator="Cache" version="25">
-  <Document name="terminal-multiline.ZPM">
+  <Document name="ISOS-over-ODBC.ZPM">
     <Module>
-      <Name>terminal-multiline</Name>
+      <Name>ISOS-over-ODBC</Name>
       <Version>1.0.1</Version>
       <Description>Multi-Line in Terminal Command</Description>
       <Keywords>Terminal, COS</Keywords>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
-       <Resource Name="%zml.MAC"/>
+       <Resource Name="zrcc.EX.ISOS.PKG"/>
     </Module>
   </Document>
 </Export>
