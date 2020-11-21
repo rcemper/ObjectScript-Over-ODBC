@@ -5,7 +5,7 @@ Class zrcc.EX.ISOS [ Language = objectscript ]
 /// check connectivity
 ClassMethod Ping() As %String [ SqlName = Ping, SqlProc ]
 {
- quit $system.INetInfo.LocalHostName()_"::"_$namespace_"_::_"_$ZV
+ quit $system.INetInfo.LocalHostName()_"::"_$namespace_"::"_$ZV
 }
 
 /// set / kill global over ODBC
