@@ -8,7 +8,7 @@
       <Keywords>Global, ODBC, SQL, COS</Keywords>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
-       <Resource Name="zrcc.EX.ISOS.PKG"/>
+       <Resource Name="zrcc.EX.PKG"/>
     </Module>
   </Document>
 </Export>
