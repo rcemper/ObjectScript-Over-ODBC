@@ -1,8 +1,3 @@
- ~~~
- This is a coding example working on IRIS 2020.1 and on Caché 2018.1.3 
- It will not be kept in sync with new versions      
- It is also NOT serviced by InterSystems Support !   
-~~~ 
 Every now and then you may encounter a situation where for various reasons  
 ODBC is the only option to access a remote system. Which is sufficient as long as you need to examine or change tables.  
 But you can't directly execute some commands or change some Global.  
