@@ -98,4 +98,4 @@ ok: ^rcc4(5)
 [Demo Server WebTerminal](https://isos-over-odbc.demo.community.intersystems.com/terminal/)    
         
 **Code Quality**   
-<img width="85%" src="https://openexchange.intersystems.com/mp/img/packages/1776/screenshots/lk8hcoa0aoz4hve18sc9tddizu.jpg">
+<img width="85%" src="https://openexchange.intersystems.com/mp/img/packages/1777/screenshots/up6whdxsk8aqndm8vmobu9mapse.jpg">
