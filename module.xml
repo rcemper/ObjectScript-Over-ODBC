@@ -3,7 +3,7 @@
   <Document name="ISOS-over-ODBC.ZPM">
     <Module>
       <Name>ISOS-over-ODBC</Name>
-      <Version>1.0.2</Version>
+      <Version>1.0.3</Version>
       <Description>Allow running ObjectScript and especially Global access over ODBC/JDBC</Description>
       <Keywords>Global, ODBC, SQL, COS</Keywords>
       <Packaging>module</Packaging>
