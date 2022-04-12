@@ -25,11 +25,11 @@ errset
 
 /// eXecute Command over ODBC
 /// name of local variable for return value
-ClassMethod Xcmd(cmd As %String, ret As %String = "") As %String [ SqlName = Xcmd, SqlProc ]
+ClassMethod Xcmd(cmd As %String, retr As %String = "") As %String [ SqlName = Xcmd, SqlProc ]
 {
  set $ZT="errx",res=""
  Xecute cmd
- if ret?.1"%"1A set res=$g(@ret)   
+ if retr?.1"%"1A set res=$g(@retr)   
  quit "ok: "_res
  
 errx
