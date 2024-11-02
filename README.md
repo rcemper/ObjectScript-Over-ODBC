@@ -31,18 +31,18 @@ __Examples:__
 ~~~  
 USER>do $system.SQL.Shell()   
 SQL Command Line Shell  
-[SQL]USER>>select rccEX.Ping()  
+[SQL]USER>>select zrcc_EX.Ping()  
 Expression_1  
 cemper9::CACHE::IRIS for Windows (x86-64) 2020.1 (Build 215U) Mon Mar 30 2020 20:14:33 EDT  
 ~~~
 Check existence of Global ^rcc  
 ~~~  
-[SQL]USER>>select rccEX.Xcmd('set %y=$d(^rcc)','%y')  
+[SQL]USER>>select zrcc_EX.Xcmd('set %y=$d(^rcc)','%y')  
 ok: 10  
 ~~~  
 Set some value to ^rcc4(1,"demo",3,4)  
 ~~~  
-[SQL]USER>>select rccEX.Gset('^rcc4','(1,"demo",3,4)','this is a demo',1)  
+[SQL]USER>>select zrcc_EX.Gset('^rcc4','(1,"demo",3,4)','this is a demo',1)  
 Expression_1  
 ok: ^rcc4(1,"demo",3,4)  
 ~~~  
@@ -71,7 +71,7 @@ Reference       Value   $Data
 ~~~
 Now run the copy to remote global  
 ~~~
-[SQL]USER>>select rccEX.Gset('^rcc4',reference,value,"$DATA")  from rcc_G.Scan where rcc_G.scan('^rcc2',4)=1  
+[SQL]USER>>select zrcc_EX.Gset('^rcc4',reference,value,"$DATA")  from rcc_G.Scan where rcc_G.scan('^rcc2',4)=1  
 Expression_1  
 ok: ^rcc4  
 ok: ^rcc4(1)  
