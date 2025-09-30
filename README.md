@@ -35,9 +35,9 @@ SQL Command Line Shell
 Expression_1  
 cemper9::CACHE::IRIS for Windows (x86-64) 2020.1 (Build 215U) Mon Mar 30 2020 20:14:33 EDT  
 ~~~
-Check existence of Global ^rcc  
+Check existence of the Global  
 ~~~  
-[SQL]USER>>select zrcc_EX.Xcmd('set %y=$d(^rcc)','%y')  
+[SQL]USER>>select zrcc_EX.Xcmd('set %y=$d(^%SYS)','%y')  
 ok: 10  
 ~~~  
 Set some value to ^rcc4(1,"demo",3,4)  
@@ -46,50 +46,81 @@ Set some value to ^rcc4(1,"demo",3,4)
 Expression_1  
 ok: ^rcc4(1,"demo",3,4)  
 ~~~  
-Do a global copy from ^rcc2 to ^rcc4.  
+Do a global copy from ^%SYS to ^rcc4.  
 First show ^rcc2  
 ~~~
-USER>>select reference,value,"$DATA" from rcc_G.Scan where rcc_G.scan('^rcc2',4)=1  
+USER>>select reference,value,"$DATA" from rcc_G.Scan where rcc_G.scan('^%SYS')=1  
 Reference       Value   $Data  
- ^rcc2                  10  
-(1)             1       1  
-(2)             2       11  
-(2,"xx")                10  
-(2,"xx",1)      "XX1"   1  
-(2,"xx",10)     "XX10"  1  
-(2,"xx",4)      "XX4"   1  
-(2,"xx",7)      "XX7"   1  
-(3)             3       1  
-(4)             4       11  
-(4,"xx")                10  
-(4,"xx",1)      "XX1"   1  
-(4,"xx",10)     "XX10"  1  
-(4,"xx",4)      "XX4"   1  
-(4,"xx",7)      "XX7"   1  
-(5)             5       1  
-16 Rows(s) Affected  
+|  ^%SYS |  | 10 |
+| ("CSP") |  | 10 |
+| ("CSPAppSec") | 64 | 1 |
+| ("CacheTempDir") | "c:\intersystems\iris242\mgr\iristemp\" | 1 |
+| ("DBRefByName") |  | 10 |
+| ("Ensemble") | "2025-02-03 18:08:28" | 11 |
+| ("ErrorPurge") | 30 | 1 |
+| ("FIPSMode") | 0 | 1 |
+| ("GBLOCKCOPY") | "1.0~" | 1 |
+| ("IRISTempDir") | "c:\intersystems\iris242\mgr\iristemp\" | 1 |
+| ("JOURNAL") | 0 | 11 |
+| ("LANGUAGE") |  | 10 |
+| ("LASTSESSIONGUID") | "6V3a¦"_$c(154)_"ð"_$c(17,128,0,0,0,0,0,0,0) | 1 |
+| ("LOCALE") |  | 10 |
+| ("MPP") |  | 10 |
+| ("NLS") |  | 10 |
+| ("SERVICE") |  | 10 |
+| ("SSPort") | 11972 | 1 |
+| ("StreamLocation") |  | 10 |
+| ("SystemMode") | "TEST" | 1 |
+| ("TempDir") | "C:\InterSystems\IRIS242\mgr\Temp" | 1 |
+| ("WQM") |  | 10 |
+| ("WebServer") |  | 10 |
+| ("bindir") | "c:\intersystems\iris242\bin\" | 1 |
+| ("java") |  | 10 |
+| ("ml") |  | 10 |
+| ("python") |  | 10 |
+| ("shutdownlogerrors") | 0 | 1 |
+| ("sql") |  | 10 |
+| ("sysdir") | "c:\intersystems\iris242\mgr\" | 1 |
+| ("tercap") |  | 10 |
+31 Rows(s) Affected
 ~~~
 Now run the copy to remote global  
 ~~~
-[SQL]USER>>select zrcc_EX.Gset('^rcc4',reference,value,"$DATA")  from rcc_G.Scan where rcc_G.scan('^rcc2',4)=1  
-Expression_1  
-ok: ^rcc4  
-ok: ^rcc4(1)  
-ok: ^rcc4(2)  
-ok: ^rcc4(2,"xx")  
-ok: ^rcc4(2,"xx",1)  
-ok: ^rcc4(2,"xx",10)  
-ok: ^rcc4(2,"xx",4)  
-ok: ^rcc4(2,"xx",7)  
-ok: ^rcc4(3)  
-ok: ^rcc4(4)  
-ok: ^rcc4(4,"xx")  
-ok: ^rcc4(4,"xx",1)  
-ok: ^rcc4(4,"xx",10)  
-ok: ^rcc4(4,"xx",4)  
-ok: ^rcc4(4,"xx",7)  
-ok: ^rcc4(5)  
- 16 Rows(s) Affected  
+[SQL]USER>>select zrcc_EX.Gset('^rcc2',reference,value)  from rcc_G.Scan where rcc_G.scan('^%SYS')=1  
+| Expression_1 |
+| -- |
+| ok: ^rcc2 |
+| ok: ^rcc2("CSP") |
+| ok: ^rcc2("CSPAppSec") |
+| ok: ^rcc2("CacheTempDir") |
+| ok: ^rcc2("DBRefByName") |
+| ok: ^rcc2("Ensemble") |
+| ok: ^rcc2("ErrorPurge") |
+| ok: ^rcc2("FIPSMode") |
+| ok: ^rcc2("GBLOCKCOPY") |
+| ok: ^rcc2("IRISTempDir") |
+| ok: ^rcc2("JOURNAL") |
+| ok: ^rcc2("LANGUAGE") |
+| ok: ^rcc2("LASTSESSIONGUID") |
+| ok: ^rcc2("LOCALE") |
+| ok: ^rcc2("MPP") |
+| ok: ^rcc2("NLS") |
+| ok: ^rcc2("SERVICE") |
+| ok: ^rcc2("SSPort") |
+| ok: ^rcc2("StreamLocation") |
+| ok: ^rcc2("SystemMode") |
+| ok: ^rcc2("TempDir") |
+| ok: ^rcc2("WQM") |
+| ok: ^rcc2("WebServer") |
+| ok: ^rcc2("bindir") |
+| ok: ^rcc2("java") |
+| ok: ^rcc2("ml") |
+| ok: ^rcc2("python") |
+| ok: ^rcc2("shutdownlogerrors") |
+| ok: ^rcc2("sql") |
+| ok: ^rcc2("sysdir") |
+| ok: ^rcc2("tercap") |
+31 Rows(s) Affected
  ~~~
  
 [Article in DC](https://community.intersystems.com/post/objectscript-over-odbc)
