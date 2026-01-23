@@ -1,3 +1,6 @@
+<img src="https://community.intersystems.com/sites/default/files/inline/images/archived.gif" width=100></img>
+<b>&nbsp;no maintenance or update</b> 
+
 Every now and then you may encounter a situation where for various reasons  
 ODBC is the only option to access a remote system. Which is sufficient as long as you need to examine or change tables.  
 But you can't directly execute some commands or change some Global.  
@@ -125,8 +128,3 @@ Now run the copy to remote global
  
 [Article in DC](https://community.intersystems.com/post/objectscript-over-odbc)
 
-[Demo Server SMP](https://isos-over-odbc.demo.community.intersystems.com/csp/sys/UtilHome.csp)   
-[Demo Server WebTerminal](https://isos-over-odbc.demo.community.intersystems.com/terminal/)    
-        
-**Code Quality**   
-<img width="85%" src="https://openexchange.intersystems.com/mp/img/packages/1777/screenshots/bgxztcyby72sqyoawwfysts9eg.jpg">
